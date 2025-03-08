@@ -25,4 +25,3 @@ Set owner to be able to read the files:
 To uninstall the instance:
 
     remove-module --no-preserve jellyfin1
-
