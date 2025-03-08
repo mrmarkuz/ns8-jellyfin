@@ -1,6 +1,6 @@
 # ns8-jellyfin
 
-Jellyfin is a media streaming server.
+[Jellyfin](https://jellyfin.org) is a media streaming server.
 
 ## Install
 
