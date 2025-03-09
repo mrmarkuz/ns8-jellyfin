@@ -22,6 +22,7 @@ ExecStart=/usr/bin/podman run --conmon-pidfile %t/jellyfin-app.pid \
     --cidfile %t/jellyfin-app.ctr-id --cgroups=no-conmon \
     --pod-id-file %t/jellyfin.pod-id --replace -d --name  jellyfin-app \
     --security-opt label=disable \
+    --device /dev/dri/:/dev/dri/ \
     --volume jellyfin-config:/config:Z \
     --volume jellyfin-cache:/cache:Z \
     --mount type=bind,source=%S/state/media,destination=/media,ro=true,relabel=private \
