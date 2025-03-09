@@ -27,12 +27,20 @@ Or just login as app user, this way you don't need to set the owner afterwards:
     runagent -m jellyfin1
     ls -l media
 
-It's possible to mount a samba share to media so Jellyfin is able to scan it:
+It's possible to mount a samba share to media so Jellyfin is able to scan it. The following needs to be executed as root on the host.
 
     mount -t cifs -o user=markus@ad.ns8test.com //192.168.0.1/mymusicshare /home/jellyfin1/.config/state/media
 
+On Rocky I needed to install cifs-utils.
+
 During an app update the media directory gets chowned which doesn't work with a mounted samba share.
-So the media dir must not be mounted when updating the app. I'm working on other solutions.
+So the media dir must not be mounted when updating the app.
+
+## Open points
+
+- Backup only for local media
+- Managing mounting different filesystems to Jellyfin media
+- Keep mounts during app updates or automatic remounts
 
 ## Uninstall
 
