@@ -18,7 +18,7 @@ The jellyfin media directory for app instance jellyfin1 is located in
 
 Set owner so the container can read the files:
 
-    chown -R jellyfin1:fellyfin1 /home/jellyfin1/.local/share/containers/storage/volumes/jellyfin-media/_data/*
+    chown -R jellyfin1:jellyfin1 /home/jellyfin1/.local/share/containers/storage/volumes/jellyfin-media/_data/*
 
 Or just login as app user to be able to access the media directory like:
 
