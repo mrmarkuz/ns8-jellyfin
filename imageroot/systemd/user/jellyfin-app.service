@@ -15,14 +15,16 @@ EnvironmentFile=-%S/state/smarthost.env
 WorkingDirectory=%S/state
 Restart=always
 TimeoutStopSec=70
+ExecStartPre=/bin/mkdir -p media
 ExecStartPre=/bin/rm -f %t/jellyfin-app.pid %t/jellyfin-app.ctr-id
 ExecStartPre=-runagent discover-smarthost
 ExecStart=/usr/bin/podman run --conmon-pidfile %t/jellyfin-app.pid \
     --cidfile %t/jellyfin-app.ctr-id --cgroups=no-conmon \
     --pod-id-file %t/jellyfin.pod-id --replace -d --name  jellyfin-app \
+    --security-opt label=disable \
     --volume jellyfin-config:/config:Z \
     --volume jellyfin-cache:/cache:Z \
-    --volume jellyfin-media:/media:Z \
+    --mount type=bind,source=%S/state/media,destination=/media,ro=true,relabel=private \
     ${JELLYFIN_IMAGE}
 ExecStop=/usr/bin/podman stop --ignore --cidfile %t/jellyfin-app.ctr-id -t 10
 ExecReload=/usr/bin/podman kill -s HUP jellyfin-app
