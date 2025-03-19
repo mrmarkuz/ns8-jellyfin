@@ -40,7 +40,7 @@
     "host_pattern": "Must be a valid fully qualified domain name",
     "host_format": "Must be a valid fully qualified domain name",
     "storage_path": "Media path",
-    "storage_path_helper": "Jelly stores data in the volume 'jellyfin-media' by default. To use a mount of samba or an  external disk instead, enter a full path like '/mnt/jellyfin', make sure this location already exists and is a properly formatted and mounted disk. But remember, changing the storage path means it won't be part of the backup."
+    "storage_path_helper": "Jellyfin stores data in the volume 'jellyfin-media' by default. To use a mount of samba or an  external disk instead, enter a full path like '/mnt/jellyfin', make sure this location already exists and is a properly formatted and mounted disk. But remember, changing the storage path means it won't be part of the backup."
   },
   "about": {
     "title": "About"

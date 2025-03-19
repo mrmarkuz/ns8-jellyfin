@@ -134,6 +134,7 @@ export default {
       host: "",
       isLetsEncryptEnabled: false,
       isHttpToHttpsEnabled: true,
+      storage: "",
       loading: {
         getConfiguration: false,
         configureModule: false,
@@ -144,6 +145,7 @@ export default {
         host: "",
         lets_encrypt: "",
         http2https: "",
+        storage: "",
       },
     };
   },
@@ -211,6 +213,7 @@ export default {
       this.host = config.host;
       this.isLetsEncryptEnabled = config.lets_encrypt;
       this.isHttpToHttpsEnabled = config.http2https;
+      this.storage = config.storage;
 
       this.loading.getConfiguration = false;
       this.focusElement("host");
@@ -280,6 +283,7 @@ export default {
             host: this.host,
             lets_encrypt: this.isLetsEncryptEnabled,
             http2https: this.isHttpToHttpsEnabled,
+            storage: this.storage,
           },
           extra: {
             title: this.$t("settings.instance_configuration", {
