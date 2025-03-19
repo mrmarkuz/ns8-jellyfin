@@ -15,7 +15,9 @@
         "test_field": "Testfeld",
         "configure_instance": "{instance} konfigurieren",
         "save": "Speichern",
-        "title": "Einstellungen"
+        "title": "Einstellungen",
+        "storage_path": "Medienpfad",
+        "storage_path_helper": "Jellyfin speichert Mediendaten im Volume 'jellyfin-media'. Um eingehängte Mounts für Samba oder eine externe Festplatte zu nutzen, einfach den Mount z.B. '/mnt/jellyfin' angeben. Der Pfad muss existieren. Wenn dieser Pfad angepasst wird, ist er nicht im Backup inkludiert."
     },
     "common": {
         "required": "erforderlich",

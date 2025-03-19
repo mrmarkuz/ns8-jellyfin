@@ -66,6 +66,15 @@
               <cv-accordion-item :open="toggleAccordion[0]">
                 <template slot="title">{{ $t("settings.advanced") }}</template>
                 <template slot="content">
+                  <cv-text-input
+                    :label="$t('settings.storage_path')"
+                    v-model="storage"
+                    :helper-text="$t('settings.storage_path_helper')"
+                    :invalid-message="error.storage"
+                    :disabled="loading.getConfiguration || loading.configureModule"
+                    ref="storage"
+                  >
+                  </cv-text-input>
                 </template>
               </cv-accordion-item>
             </cv-accordion>
