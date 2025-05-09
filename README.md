@@ -12,6 +12,11 @@ Install via Software Center by adding my repo as explained [here](https://repo.m
 
 Configure the FQDN and use a certificate. Browse to the set FQDN and setup Jellyfin.
 
+## Media
+
+By default a volume `jellyfin-media` is used to hold the media. This volume is included in the system backup.
+You can change the storage path to for example `/mnt/jellyfin` where you can mount the wanted disk or samba/webdav share
+
 ## Upload media
 
 The jellyfin media directory for app instance jellyfin1 is located in
