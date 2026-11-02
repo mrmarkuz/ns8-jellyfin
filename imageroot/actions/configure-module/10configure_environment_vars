@@ -13,6 +13,13 @@ import agent
 # If parsing fails, output everything to stderr
 data = json.load(sys.stdin)
 
+# Setup default values
+host = data.get("host")
+h2hs = data.get("http2https", True)
+
+agent.set_env("TRAEFIK_HOST", host)
+agent.set_env("TRAEFIK_HTTP2HTTPS", h2hs)
+
 storage = data.get('storage', 'jellyfin-media')
 agent.set_env("JELLYFIN_MEDIA", storage)
 
