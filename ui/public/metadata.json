@@ -1,19 +1,23 @@
 {
-  "name": "jellyfin",
+  "name": "Jellyfin",
   "description": {
-    "en": "My jellyfin module"
+    "en": "Jellyfin is a free, open-source, and self-hosted media server that lets you organize, manage, and stream your personal digital media collection across all your devices",
+    "de": "Jellyfin ist ein kostenloser Open-Source-Mediaserver, den du selbst hosten kannst und mit dem du deine persönliche digitale Mediensammlung organisieren, verwalten und auf all deine Geräte streamen kannst",
+    "fr": "Jellyfin est un serveur multimédia gratuit, open source et auto-hébergé qui vous permet d'organiser, de gérer et de diffuser votre collection de contenus numériques personnels sur l'ensemble de vos appareils",
+    "it": "Jellyfin è un media server gratuito, open source e autogestito che ti consente di organizzare, gestire e trasmettere in streaming la tua raccolta di contenuti multimediali digitali su tutti i tuoi dispositivi",
+    "es": "Jellyfin es un servidor multimedia gratuito, de código abierto y autohospedado que te permite organizar, gestionar y transmitir tu colección personal de contenido digital a través de todos tus dispositivos"
   },
-  "categories": [],
+  "categories": ["multimedia"],
   "authors": [
     {
-      "name": "Name Surname",
-      "email": "author@yourmail.org"
+      "name": "Markus Neuberger",
+      "email": "dev@markusneuberger.at"
     }
   ],
   "docs": {
-    "documentation_url": "https://docs.jellyfin.com/",
-    "bug_url": "https://github.com/NethServer/dev",
-    "code_url": "https://github.com/author/ns8-jellyfin"
+    "documentation_url": "https://jellyfin.org/docs/",
+    "bug_url": "https://community.nethserver.org",
+    "code_url": "https://github.com/mrmarkuz/ns8-jellyfin"
   },
-  "source": "ghcr.io/nethserver/jellyfin"
+  "source": "ghcr.io/mrmarkuz/jellyfin"
 }
