@@ -11,6 +11,9 @@ Install via Software Center by adding my repo as explained [here](https://repo.m
 ## Configure
 
 Configure the FQDN and use a certificate. Browse to the set FQDN and setup Jellyfin.
+If you don't see the setup wizard, go to following URL:
+
+    https://jellyfin.domain.tld/web/#/wizardstart.html
 
 ## Media
 
@@ -19,22 +22,17 @@ You can change the storage path to for example `/mnt/jellyfin` where you can mou
 
 ## Upload media
 
-The jellyfin media directory for app instance jellyfin1 is located in
+The default jellyfin media directory for app instance jellyfin1 is located in
 
-    /home/jellyfin1/.config/state/media
+    /home/jellyfin1/.local/share/containers/storage/volumes/jellyfin-media/_data
 
 Set owner so the container can read the files:
 
-    chown -R jellyfin1:jellyfin1 /home/jellyfin1/.config/state/media
-
-Or just login as app user, this way you don't need to set the owner afterwards:
-
-    runagent -m jellyfin1
-    ls -l media
+    chown -R jellyfin1:jellyfin1 /home/jellyfin1/.local/share/containers/storage/volumes/jellyfin-media/_data
 
 It's possible to mount a samba share to media so Jellyfin is able to scan it. The following needs to be executed as root on the host.
 
-    mount -t cifs -o user=markus@ad.ns8test.com //192.168.0.1/mymusicshare /home/jellyfin1/.config/state/media
+    mount -t cifs -o user=markus@ad.ns8test.com //192.168.0.1/mymusicshare /home/jellyfin1/.local/share/containers/storage/volumes/jellyfin-media/_data
 
 On Rocky I needed to install cifs-utils.
 
