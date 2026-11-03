@@ -15,6 +15,8 @@ If you don't see the setup wizard, go to following URL:
 
     https://jellyfin.domain.tld/web/#/wizardstart.html
 
+If you still can't reach jellyfin, clear the browser cache.
+
 ## Media
 
 By default a volume `jellyfin-media` is used to hold the media. This volume is included in the system backup.
